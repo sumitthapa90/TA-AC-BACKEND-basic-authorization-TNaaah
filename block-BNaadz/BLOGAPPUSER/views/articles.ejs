@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="flex-sb">
+        <div>
+          <h2><a href="/">Home</a></h2>
+        </div>
+
+        <div>
+          <a href="/articles/new"><button>Add Articles</button></a>
+        </div>
+        <div class="btn">
+          <a href="/users/register"><button>Register</button></a>
+          <a href="/users/login"><button>Login</button></a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <% articles.forEach(article =>{%>
+      <div class="box">
+        <a href=""><h3><%= article.title %></h3></a>
+        <a href="/articles/<%= article.id %>"><button>show</button></a>
+      </div>
+      <% })%>
+    </main>
+  </body>
+</html>
