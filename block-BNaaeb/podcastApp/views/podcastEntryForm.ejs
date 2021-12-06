@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Podcast Entry Form</h2>
+    <section>
+      <form action="/podcast/newEntry" method="POST">
+        <input type="text" name="title" placeholder="title" />
+        <input type="text" name="description" placeholder="description" />
+        <input type="text" name="artist" placeholder="artist" />
+        <input type="text" name="image" placeholder="image url" />
+        <input type="number" name="likes" placeholder="likes" />
+        <input type="number" name="dislikes" placeholder="dislikes" />
+        <select name="catergory">
+          <option value="free" selected>FREE</option>
+          <option value="vip">VIP</option>
+          <option value="premium">PREMIUM</option>
+        </select>
+
+        <input type="submit" value="submit" />
+      </form>
+    </section>
+  </body>
+</html>
