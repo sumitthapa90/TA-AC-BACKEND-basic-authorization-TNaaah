@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <% include partial/header %>
+    <h1>login Page</h1>
+
+    <% if(error){%>
+    <p><%= error %></p>
+    <% }%>
+
+    <div>
+      <form action="/users/login" method="POST">
+        <input type="email" name="email" placeholder="email" />
+        <input type="password" name="password" placeholder="password" />
+        <div>
+          <a href="/"><button>Login</button></a>
+        </div>
+      </form>
+    </div>
+    <% include partial/footer %>
+  </body>
+</html>
